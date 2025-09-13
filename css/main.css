@@ -1,0 +1,129 @@
+/* ============= GLOBAL CSS =============== */
+
+/* Font Import */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Global Variables */
+
+:root {
+  /* Colors */
+  --body-color: #f8f8fa;
+  --primary-color: #695cfe;
+  --primary-color-light: #f6f5ff;
+  --text-color: #1b2124;
+
+  /* ===== Sizes ===== */
+  --header-height: 80px;
+  --footer-height: 40px;
+
+  /* Font */
+  --font-family: "Roboto", sans-serif;
+  --font-family-2: "Plus Jakarta Sans", sans-serif;
+  --font-family-3: "Segoe UI", Tahoma, sans-serif;
+
+  /* Transitions */
+  --tran-fast: all 0.2s ease;
+  --tran-medium: all 0.3s ease;
+  --tran-slow: all 0.5s ease;
+  --tran-slowest: all 3s ease;
+}
+
+/* Global Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family-2);
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--body-color);
+}
+
+/* Logo Header */
+.header-layout {
+  width: 100%;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.header-layout img {
+  max-width: 300px;
+}
+
+/* Container split */
+.body-layout {
+  display: flex;
+  flex: 1;
+}
+
+/* Left panel */
+.left-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+}
+
+.left-panel h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.left-panel p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.left-panel .support {
+  margin-top: 30px;
+  font-size: 0.95rem;
+}
+
+.left-panel .support a {
+  color: var(--text-color);
+  text-decoration: underline;
+}
+
+/* Right panel */
+.right-panel {
+  flex: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+
+/* Footer */
+
+.footer-layout {
+  width: 100%;
+  height: var(--footer-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 900px) {
+  .body-layout {
+    flex-direction: column;
+  }
+  .left-panel,
+  .right-panel {
+    flex: none;
+    width: 100%;
+  }
+}
